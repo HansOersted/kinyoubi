@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>今日は金曜日ですか？</title>
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: black;
-      color: white;
-      font-size: 4rem;
-      text-align: center;
+    body{
+      margin:0;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#000;
+      color:#fff;
+      font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      text-align:center;
     }
+    .wrap{ line-height:1.4; }
+    .q{ font-size:2.2rem; opacity:0.9; margin-bottom:1.2rem; }
+    .a{ font-size:5rem; }
   </style>
 </head>
 <body>
-  <div id="answer"></div>
+  <div class="wrap">
+    <div class="q">今日は金曜日ですか？</div>
+    <div class="a" id="answer">…</div>
+  </div>
 
   <script>
-    const today = new Date().getDay();
-    const answer = document.getElementById("answer");
-
-    if (today === 5) {
-      answer.textContent = "はい";
-    } else {
-      answer.textContent = "いいえ";
-    }
+    const day = new Date().getDay(); // 0=Sun ... 5=Fri
+    document.getElementById("answer").textContent = (day === 5) ? "はい" : "いいえ";
   </script>
 </body>
 </html>
