@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>今日は金曜日ですか？</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+      font-size: 4rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="answer"></div>
+
+  <script>
+    const today = new Date().getDay();
+    const answer = document.getElementById("answer");
+
+    if (today === 5) {
+      answer.textContent = "はい";
+    } else {
+      answer.textContent = "いいえ";
+    }
+  </script>
+</body>
+</html>
